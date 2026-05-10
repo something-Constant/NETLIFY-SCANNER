@@ -1,4 +1,4 @@
-# 🚀 IR_NETLIFY Scanner
+# 🚀 IR NETLIFY Scanner
 
 اسکنر سریع و چند‌ترد برای بررسی IP و دامنه‌های مرتبط با Netlify و سرویس‌های Kubernetes ⚡
 
