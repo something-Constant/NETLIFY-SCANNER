@@ -618,8 +618,9 @@ C_RED = "\033[91m"
 BOLD = "\033[1m"
 RESET = "\033[0m"
 
+
 def show_header():
-    print(f"\n{BOLD}{C_CYAN}    ▶ {BRAND_NAME} SCANNER v2.0{RESET}")
+    print(f"\n{BOLD}{C_CYAN}    ▶ {BRAND_NAME} SCANNER v2.1.0{RESET}")
     print(f"{C_CYAN}    {'-' * 30}{RESET}")
     print(f"    {BOLD}{C_YELLOW}Channel:{RESET} {TELEGRAM_CH}\n")
 
@@ -726,7 +727,7 @@ def main():
                 if res:
                     ip, dom, status = res
                     found_count += 1
-                    ip_stats[ip] += 
+                    ip_stats[ip] += 1
 
                     table1.add_row(
                         f"{ip:<15}",
@@ -751,10 +752,9 @@ def main():
             print(f"\n{C_RED}[!] Operation cancelled by user.{RESET}")
             for future in futures:
                 future.cancel()
-            
+
             # Shutdown executor immediately
             executor.shutdown(wait=False, cancel_futures=True)
-
 
     f.close()
     f_ip.close()
